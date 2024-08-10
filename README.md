@@ -18,6 +18,7 @@ Each file name ends with 3-letter (or 4-letter) code that has contains informati
 | `M`    | Color    | Monotone      |
 | `R`    | Size     | Regular       |
 | `T`    | Color    | Transparent   |
+| `S`    | Size     | Small         |
 | `W`    | Color    | White         | 
 
 # Customization
