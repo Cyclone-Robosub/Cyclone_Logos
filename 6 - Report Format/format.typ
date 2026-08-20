@@ -28,10 +28,14 @@
     paper: "us-letter", 
     height: auto,
     margin: (bottom: 1.2in),
-    background: align(bottom, image("background.svg", width: 101%)),
-    header: context{
+    background: 
+        place(
+        bottom, 
+        dy: 1pt,
+        image("background.svg", width: 101%)
+        ),
+          header: context{
       set text(weight: "light", .8em)
-      // datetime.today().display("[month]/[day]/[year]")
       date
       h(1fr)
       counter(page).display("1")
@@ -42,11 +46,11 @@
       align(right, block(width: 1.20in, align(right, org)))
       place(bottom + right, 
         dx: .75in, 
-        dy: -.25in, 
+        dy: -.24in, 
         image(logo, width: .5in)
       )
     },
-    footer-descent: 43%,
+    footer-descent: 45%,
     
   )
 
@@ -71,7 +75,6 @@
 
   set grid(gutter: .2in)
 
-  show image: it => block(radius: .25em, clip: true, it)
 
 
   // Title 
@@ -79,6 +82,10 @@
   v(-1.75em)
   text(weight: "light", 1.5em, subtitle)
 
-  body
+  {
+    show image: it => block(radius: .25em, clip: true, it)
+    body
+
+  }
   
 }
